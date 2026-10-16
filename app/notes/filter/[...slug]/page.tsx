@@ -5,10 +5,22 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import NotesClient from "./Notes.client";
+import { Metadata } from "next";
 
 interface NotesPageProps {
   params: Promise<{ slug: string[] }>;
 }
+
+export const generateMetadata = async ({
+  params,
+}: NotesPageProps): Promise<Metadata> => {
+  const { slug } = await params;
+  const tag = slug?.[0] === "all" ? "All notes" : slug?.[0] || "All notes";
+
+  return {
+    title: `Note - ${tag}`,
+  };
+};
 
 export default async function NotesPage({ params }: NotesPageProps) {
   const { slug } = await params;
