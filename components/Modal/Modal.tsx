@@ -35,7 +35,6 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
     };
   }, [isOpen, onClose]);
 
-  // Не рендерим ничего на сервере или если модалка закрыта
   if (!mounted || !isOpen) return null;
 
   return createPortal(

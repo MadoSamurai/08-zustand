@@ -29,7 +29,14 @@ export const metadata: Metadata = {
     title: "08-zustand",
     description: "NoteHub app",
     url: "https://notehub.com/",
-    images: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+    images: [
+      {
+        url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NoteHub app",
+      },
+    ],
   },
 };
 

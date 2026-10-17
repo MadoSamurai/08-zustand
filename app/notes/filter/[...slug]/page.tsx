@@ -19,6 +19,20 @@ export const generateMetadata = async ({
 
   return {
     title: `Note - ${tag}`,
+    description: "Note list",
+    openGraph: {
+      title: `Note - ${tag}`,
+      description: "Note list",
+      url: "https://notehub.com/",
+      images: [
+        {
+          url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+          width: 1200,
+          height: 630,
+          alt: "NoteHub note list",
+        },
+      ],
+    },
   };
 };
 
