@@ -3,14 +3,14 @@ import { CreateNotePayLoad } from "../api";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-const initialDraft = {
+const initialDraft: CreateNotePayLoad = {
   title: "",
   content: "",
   tag: "Todo" as NoteTag,
 };
 
 interface NoteDraftStore {
-  draft: Partial<CreateNotePayLoad>;
+  draft: CreateNotePayLoad;
   setDraft: (noteDraftData: Partial<CreateNotePayLoad>) => void;
   clearDraft: () => void;
 }

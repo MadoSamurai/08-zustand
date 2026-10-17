@@ -34,8 +34,6 @@ export default function NotesClient({ tag }: NotesClientProps) {
   const notes = data?.notes ?? [];
   const totalPages = data?.totalPages ?? 0;
 
-  if (isLoading) return <p>Loading, please wait...</p>;
-  if (isError || !data) return <p>Something went wrong.</p>;
   return (
     <>
       <div className={css.toolbar}>

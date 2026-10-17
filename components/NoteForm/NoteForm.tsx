@@ -71,7 +71,7 @@ export default function NoteForm({ onCancel }: NoteFormProps) {
         <select
           id="tag"
           name="tag"
-          defaultValue={draftStore.draft.tag}
+          value={draftStore.draft.tag}
           onChange={handeleChange}
           className={css.select}
         >

@@ -20,6 +20,7 @@ const robotoFont = Roboto({
   weight: "400",
   subsets: ["latin"],
   variable: "--roboto-font",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
